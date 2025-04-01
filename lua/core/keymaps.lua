@@ -70,3 +70,10 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Go back to file manager
 vim.keymap.set("n", "<leader>f", vim.cmd.Ex)
+
+-- Refactor words (Thanks theprimeagen)
+vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Move highlighted text around and work around braces and automatically indent(Thanks theprimeagen)
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

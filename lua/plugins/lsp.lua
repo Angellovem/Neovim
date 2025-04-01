@@ -229,7 +229,7 @@ return {
             cssls = {},
             sqlls = {},
             gopls = {},
-
+            clangd = {},
             lua_ls = {
                 -- cmd = {...},
                 -- filetypes = { ...},
