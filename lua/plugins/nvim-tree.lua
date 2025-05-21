@@ -1,17 +1,14 @@
 return {
   'nvim-tree/nvim-tree.lua',
   dependencies = {
-    'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    'nvim-tree/nvim-web-devicons',
   },
   config = function()
-    -- Disable netrw (recommended by nvim-tree)
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
 
-    -- Keymap: <leader>f to toggle the file explorer
     vim.keymap.set('n', '<leader>f', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
-    -- Setup nvim-tree
     require('nvim-tree').setup({
       view = {
         width = 30,
@@ -23,6 +20,16 @@ return {
       filters = {
         dotfiles = false,
       },
+      update_focused_file = {
+        enable = true,
+        update_root = false,
+      },
+      actions = {
+        open_file = {
+          quit_on_open = true, -- ✅ auto-close tree after opening file
+        },
+      },
     })
   end
 }
+
