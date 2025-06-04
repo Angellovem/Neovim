@@ -19,6 +19,7 @@ return {
       },
       filters = {
         dotfiles = false,
+        custom = {},
       },
       update_focused_file = {
         enable = true,
@@ -26,7 +27,7 @@ return {
       },
       actions = {
         open_file = {
-          quit_on_open = true, -- ✅ auto-close tree after opening file
+          quit_on_open = true, 
         },
       },
     })
