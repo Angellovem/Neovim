@@ -44,4 +44,5 @@ require('lazy').setup({
     require 'plugins.nvim-tree',
     require 'plugins.copilot',
     require 'plugins.neogit',
+    require 'plugins.copilotchat',
 })
