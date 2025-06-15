@@ -6,8 +6,8 @@ return {
     signs = {
       add          = { text = '+' }, -- Line added
       change       = { text = '~' }, -- Line changed
-      delete       = { text = '_' }, -- Line deleted
-      topdelete    = { text = '‾' }, -- Top line of a block of deleted lines
+      delete       = { text = '-' }, -- Line deleted
+      topdelete    = { text = '-' }, -- Top line of a block of deleted lines
       changedelete = { text = '~' }, -- Changed then deleted
     },
 
@@ -15,8 +15,8 @@ return {
     signs_staged = {
       add          = { text = '+' },
       change       = { text = '~' },
-      delete       = { text = '_' },
-      topdelete    = { text = '‾' },
+      delete       = { text = '-' },
+      topdelete    = { text = '-' },
       changedelete = { text = '~' },
     },
   },

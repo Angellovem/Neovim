@@ -32,7 +32,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Main setup for the plugins, this is where you might want to start adding your plugins
 require('lazy').setup({
     require 'plugins.colortheme',
-    require 'plugins.bufferline',
     require 'plugins.lualine',
     require 'plugins.treesitter',
     require 'plugins.telescope',
@@ -43,4 +42,6 @@ require('lazy').setup({
     require 'plugins.misc',
     require 'plugins.flash',
     require 'plugins.nvim-tree',
+    require 'plugins.copilot',
+    require 'plugins.neogit',
 })
