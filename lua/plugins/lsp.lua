@@ -250,22 +250,22 @@ return {
             },
         }
         gopls = {
-        settings = {
-            gopls = {
-                analyses = {
-                    unusedparams = true, -- Warn about unused parameters
-                    shadow = true,      -- Warn about shadowed variables
-                    nilness = true,     -- Warn about nil pointer dereferences
-                    unreachable = true, -- Warn about unreachable code
-                },
-                staticcheck = true,     -- Enable staticcheck for advanced linting
-                hints = {               -- Optional: Enable inlay hints
-                    parameterNames = true,
-                    assignVariableTypes = true,
+            settings = {
+                gopls = {
+                    analyses = {
+                        unusedparams = true, -- Warn about unused parameters
+                        shadow = true,      -- Warn about shadowed variables
+                        nilness = true,     -- Warn about nil pointer dereferences
+                        unreachable = true, -- Warn about unreachable code
+                    },
+                    staticcheck = true,     -- Enable staticcheck for advanced linting
+                    hints = {               -- Optional: Enable inlay hints
+                        parameterNames = true,
+                        assignVariableTypes = true,
+                    },
                 },
             },
         },
-    },
 
         -- Ensure the servers and tools above are installed
         --

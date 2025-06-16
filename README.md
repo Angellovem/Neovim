@@ -3,14 +3,17 @@ Welcome to my Neovim setup! This isn't meant to be the fastest, most minimal, or
 | File                   | What's it do?                                                               |
 | ---------------------- | --------------------------------------------------------------------------- |
 | `autocompletion.lua`   | Sets up autocompletion using `nvim-cmp` and related sources.                |
-| `bufferline.lua`       | Configures `bufferline.nvim` for tab-like buffer navigation.                |
 | `colortheme.lua`       | Applies and configures the current colorscheme (`rose-pine`, for now).      |
+| `copilot.lua`          | Enables GitHub Copilot integration and keybindings.                         |
+| `copilotchat.lua`      | Provides a chat interface for Copilot inside Neovim.                        |
 | `flash.lua`            | Adds motion enhancements via the `flash.nvim` plugin for faster navigation. |
 | `gitsigns.lua`         | Integrates `gitsigns.nvim` to show Git changes in the sign column.          |
 | `indent-blankline.lua` | Displays indentation guides and context using `indent-blankline.nvim`.      |
 | `lsp.lua`              | Sets up the Language Server Protocol with `mason.nvim` and `lspconfig`.     |
 | `lualine.lua`          | Configures `lualine.nvim` as the statusline.                                |
-| `misc.lua`             | Miscellaneous settings and small utilities that don’t fit elsewhere.        |
+| `misc.lua`             | Miscellaneous settings and small utilities that don't fit elsewhere.        |
+| `neogit.lua`           | Adds a Git UI powered by `neogit` and `diffview.nvim`.                      |
+| `nvim-tree.lua`        | File-explorer tree for quick navigation using `nvim-tree.lua`.              |
 | `telescope.lua`        | Sets up `telescope.nvim` with keybindings and extensions.                   |
 | `treesitter.lua`       | Configures `nvim-treesitter` for better syntax highlighting and parsing.    |
 ## Design goals
@@ -21,7 +24,7 @@ Welcome to my Neovim setup! This isn't meant to be the fastest, most minimal, or
 - **Minimal global state**: Tries to keep config isolated and organized.
 ## Notes
 
-I’m using [lazy.nvim](https://github.com/folke/lazy.nvim) as the plugin manager. All plugin declarations are elsewhere — this directory only handles the actual configuration.
+I'm using [lazy.nvim](https://github.com/folke/lazy.nvim) as the plugin manager. All plugin declarations are elsewhere — this directory only handles the actual configuration.
 
 This config works well for general-purpose programming (e.g., Lua, TypeScript, Python, Go), but is easy to extend for other languages.
 
@@ -36,7 +39,7 @@ This config works well for general-purpose programming (e.g., Lua, TypeScript, P
 | `n`          | `n`     | Find next and center      |
 | `N`          | `n`     | Find previous and center  |
 | `<leader>lw` | `n`     | Toggle line wrapping      |
-| `<leader>f`  | `n`     | Open file manager (`:Ex`) |
+| `<leader>f`  | `n`     | Toggle file explorer (`nvim-tree`) |
 ### Window & Buffer Management
 | Keymap       | Mode(s) | Description                   |
 | ------------ | ------- | ----------------------------- |
@@ -129,3 +132,17 @@ This config works well for general-purpose programming (e.g., Lua, TypeScript, P
 | `r`        | `o`          | Remote flash                             |
 | `R`        | `o`, `x`     | Treesitter search                        |
 | `<C-s>`    | `c`          | Toggle flash in command line             |
+
+### Git (Neogit & Diffview)
+| Keymap      | Mode(s) | Description                     |
+|-------------|---------|---------------------------------|
+| `<leader>g` | `n`     | Open Neogit status (tab)        |
+| `<leader>gd`| `n`     | Open Diffview                   |
+| `<leader>gD`| `n`     | Close Diffview                  |
+| `<leader>gc`| `n`     | View merge conflicts in Neogit  |
+
+### Copilot
+| Keymap       | Mode(s) | Description                       |
+|--------------|---------|-----------------------------------|
+| `<C-l>`      | `i`     | Accept Copilot suggestion         |
+| `<leader>cc` | `n`     | Toggle Copilot Chat window        |
