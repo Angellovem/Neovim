@@ -4,10 +4,10 @@ return {
         "nvim-lua/plenary.nvim",
         "sindrets/diffview.nvim", }, cmd = "Neogit",
     keys = {
-        { "<leader>g", function() require("neogit").open({ kind = "tab" }) end, desc = "Open Neogit (tab)" },
-        { "<leader>gd", ":DiffviewOpen<CR>", desc = "Open Diffview" },
-        { "<leader>gD", ":DiffviewClose<CR>", desc = "Close Diffview" },
-        { "<leader>gc", ":Neogit kind=split<CR>", desc = "View conflicts in Neogit" },
+        { "<leader>n", function() require("neogit").open({ kind = "tab" }) end, desc = "Open Neogit (tab)" },
+        { "<leader>nd", ":DiffviewOpen<CR>", desc = "Open Diffview" },
+        { "<leader>nD", ":DiffviewClose<CR>", desc = "Close Diffview" },
+        { "<leader>nc", ":Neogit kind=split<CR>", desc = "View conflicts in Neogit" },
     },
     config = function()
         require("neogit").setup({
