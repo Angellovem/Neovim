@@ -45,4 +45,5 @@ require('lazy').setup({
     require 'plugins.copilot',
     require 'plugins.neogit',
     require 'plugins.copilotchat',
+    require 'plugins.css-colors',
 })
