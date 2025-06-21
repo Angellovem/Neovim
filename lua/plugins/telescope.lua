@@ -89,8 +89,11 @@ return {
         -- Search within the current buffer using fuzzy match (dropdown style)
         vim.keymap.set('n', '<leader>/', function()
             builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-                winblend = 10,
                 previewer = false,
+                layout_config = {
+                    width = 0.8,
+                    height = 0.6,
+                },
             })
         end, { desc = '[/] Fuzzily search in current buffer' })
 
